@@ -1,0 +1,159 @@
+{
+  "code": "success",
+  "message": "",
+  "accesstoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImI2MzEwNTQ1MzI5IiwidXNlcnR5cGUiOiIxIiwiaWRjb2RlIjoiNjMxMDU0NTMyOSIsInN0ZGlkIjoiMTM2OTY5IiwiZmlyc3ROYW1lRW4iOiJQYW51IiwiZmlyc3ROYW1lVGgiOiLguKDguLLguJPguLgiLCJsYXN0TmFtZUVuIjoiVEFOQVZBVEFWSVZBVCIsImxhc3ROYW1lVGgiOiLguJXguJnguLLguKfguLLguJfguKfguLTguKfguLHguJLguJnguYwiLCJ0aXRsZVRoIjoi4LiZ4Liy4LiiIiwicm9sZUlkIjpudWxsLCJzdGRTdGF0dXNDb2RlIjoiMjcxMDEiLCJpYXQiOjE2NzkzNzA5NDgsImV4cCI6MTY3OTM3Mjc0OH0.QKVLgg3iV1BShwlvwIy9d__i7CCTcXmzLwEFvyf9FVY",
+  "renewtoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImI2MzEwNTQ1MzI5IiwidXNlcnR5cGUiOiIxIiwiaWRjb2RlIjoiNjMxMDU0NTMyOSIsInN0ZGlkIjoiMTM2OTY5IiwiZmlyc3ROYW1lRW4iOiJQYW51IiwiZmlyc3ROYW1lVGgiOiLguKDguLLguJPguLgiLCJsYXN0TmFtZUVuIjoiVEFOQVZBVEFWSVZBVCIsImxhc3ROYW1lVGgiOiLguJXguJnguLLguKfguLLguJfguKfguLTguKfguLHguJLguJnguYwiLCJ0aXRsZVRoIjoi4LiZ4Liy4LiiIiwicm9sZUlkIjpudWxsLCJzdGRTdGF0dXNDb2RlIjoiMjcxMDEiLCJpYXQiOjE2NzkzNzA5NDgsImV4cCI6MTY3OTM3NDU0OH0.T3rIfINtsSLQjsxfnx_RIgrF_8kgxJqz6gaJaM4SkOY",
+  "user": {
+    "loginName": "b6310545329",
+    "userType": "1",
+    "idCode": "6310545329",
+    "titleTh": "นาย",
+    "titleEn": "Mr.",
+    "firstNameTh": "ภาณุ",
+    "firstNameEn": "Panu",
+    "middleNameTh": null,
+    "middleNameEn": null,
+    "lastNameTh": "ตนาวาทวิวัฒน์",
+    "lastNameEn": "TANAVATAVIVAT",
+    "avatar": " ",
+    "gender": "18701",
+    "student": {
+      "loginName": "b6310545329",
+      "stdId": "136969",
+      "stdCode": "6310545329",
+      "titleTh": "นาย",
+      "titleEn": "Mr.",
+      "firstNameTh": "ภาณุ",
+      "middleNameTh": null,
+      "lastNameTh": "ตนาวาทวิวัฒน์",
+      "firstNameEn": "Panu",
+      "middleNameEn": null,
+      "lastNameEn": "TANAVATAVIVAT",
+      "copenId": "4776",
+      "copenNameTh": "ปริญญาตรี หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมซอฟต์แวร์และความรู้ (หลักสูตรนานาชาติ) นิสิตแลกเปลี่ยนต่างประเทศ",
+      "copenNameEn": "ปริญญาตรี หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมซอฟต์แวร์และความรู้ (หลักสูตรนานาชาติ) นิสิตแลกเปลี่ยนต่างประเทศ",
+      "campusCode": "B",
+      "campusNameTh": "บางเขน",
+      "campusNameEn": "Bangkhen",
+      "facultyCode": "E",
+      "facultyNameTh": "วิศวกรรมศาสตร์",
+      "facultyNameEn": "Engineering",
+      "departmentCode": "B",
+      "departmentNameTh": "วิศวกรรมคอมพิวเตอร์",
+      "departmentNameEn": "Computer Engineering",
+      "majorCode": "E17",
+      "majorNameTh": "วิศวกรรมซอฟต์แวร์และความรู้",
+      "majorNameEn": "Software & Knowledge Engineering",
+      "nationCode": "TH",
+      "nationalityNameTh": "ประเทศไทย",
+      "nationalityNameEn": "THAILAND",
+      "studentStatusCode": "17004",
+      "studentStatusNameTh": "พิเศษ (นานาชาติ)",
+      "studentStatusNameEn": "Special (International Program)",
+      "studentTypeCode": "27101",
+      "studentTypeNameTh": "นิสิตปัจจุบัน",
+      "studentTypeNameEn": "นิสิตปัจจุบัน",
+      "edulevelCode": "0",
+      "edulevelNameTh": "ปริญญาตรี",
+      "edulevelNameEn": "Bachelor Degree",
+      "studentYear": "3",
+      "advisorId": "E9022",
+      "advisorNameTh": "ยอดเยี่ยม ทิพย์สุวรรณ์",
+      "advisorNameEn": "Yodyium Tipsuwan",
+      "positionTh": "ผู้ช่วยศาสตราจารย์",
+      "email": " ",
+      "mobileNo": " "
+    },
+    "roleMenus": [
+      {
+        "menuId": 9081,
+        "menuNameTh": "ทำงาน",
+        "menuUrl": null,
+        "menuIcon": null,
+        "parentMenuId": 9080,
+        "menuType": 2
+      },
+      {
+        "menuId": 9082,
+        "menuNameTh": "ข่าวสารนิสิต",
+        "menuUrl": "/std/announcement",
+        "menuIcon": "fas fa-calendar-alt",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9084,
+        "menuNameTh": "ตารางเรียน/ตารางสอบ",
+        "menuUrl": "/std/classroom",
+        "menuIcon": "fas fa-book-reader",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9085,
+        "menuNameTh": "วิชาที่เปิดให้ลงทะเบียน",
+        "menuUrl": "/std/subject",
+        "menuIcon": "ion ion-md-apps",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9086,
+        "menuNameTh": "เลือกรูปแบบ/การเงิน",
+        "menuUrl": "/std/financeStudent",
+        "menuIcon": "fas fa-dollar-sign",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9087,
+        "menuNameTh": "ลงทะเบียน/เพิ่ม-ถอน",
+        "menuUrl": "/std/enroll",
+        "menuIcon": "fas fa-th-list",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9088,
+        "menuNameTh": "ผลการลงทะเบียน",
+        "menuUrl": "/std/enrollresult",
+        "menuIcon": "fas fa-list-ul",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9089,
+        "menuNameTh": "ตรวจสอบผลการเรียน",
+        "menuUrl": "/std/grade",
+        "menuIcon": "zmdi zmdi-graduation-cap",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9090,
+        "menuNameTh": "ประวัติการลงทะเบียน",
+        "menuUrl": "/std/enrollhistory",
+        "menuIcon": "fas fa-scroll",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9091,
+        "menuNameTh": "สถิติ",
+        "menuUrl": "/std/dashboard",
+        "menuIcon": "zmdi zmdi-apps",
+        "parentMenuId": 9081,
+        "menuType": 3
+      },
+      {
+        "menuId": 9095,
+        "menuNameTh": "ประวัตินิสิต",
+        "menuUrl": "/std/profile",
+        "menuIcon": "zmdi zmdi-account-box",
+        "parentMenuId": 9081,
+        "menuType": 3
+      }
+    ]
+  },
+  "cache": false
+}

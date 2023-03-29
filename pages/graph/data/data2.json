@@ -1,0 +1,30 @@
+{
+  "result": [
+    {
+      "subject_code": "01417167",
+      "subject_name_th": "คณิตศาสตร์วิศวกรรม I",
+      "subject_name_en": "Engineering Mathematics I",
+      "credit": 3,
+      "pre_subject": null,
+      "offset": "1/1"
+    },
+    {
+      "subject_code": "01417168",
+      "subject_name_th": "คณิตศาสตร์วิศวกรรม II",
+      "subject_name_en": "Engineering Mathematics II",
+      "credit": 3,
+      "pre_subject": [
+        "01417167"
+      ],
+      "offset": "1/2"
+    },
+    {
+        "subject_code": "01204211",
+        "subject_name_th": "คณิตศาสตร์เต็มหน่วยและพีชคณิตเชิงเส้น",
+        "subject_name_en": "Discrete Mathematics and Linear Algebra",
+        "credit": 4,
+        "pre_subject": null,
+        "offset": "1/2"
+    }
+  ]
+}
