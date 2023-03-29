@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import axios from 'axios'
 
-import { encodeString } from './encoder'
+import { encodeString } from '../../lib/encoder'
 
 import {Prompt} from 'next/font/google' 
 

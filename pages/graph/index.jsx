@@ -6,8 +6,6 @@ import { useRouter } from 'next/router'
 import { KuVViz } from "ku-vviz"
 import 'ku-vviz/dist/index.css'
 
-import data from './data/data.json'
-
 export default function GraphPage() {
 
     const {data, setData} = useContext(CourseDataContext)
