@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import {CourseDataContext} from '../contexts/DataContext'
+import {CourseDataContext} from '../../contexts/DataContext'
 
 import { useRouter } from 'next/router'
 

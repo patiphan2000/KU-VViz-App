@@ -87,3 +87,33 @@
     justify-items: left;
     font-size: 0.8em;
 }
+
+.input_container {
+    position: relative;
+    width: 100%;
+}
+
+.input_container svg {
+    position: absolute;
+    left: 230px;
+    top: 12px;
+    color: gray;
+    cursor: pointer;
+}
+
+.input_field {
+    font-family: 'Prompt';
+    width: 95%;
+    background: #f5f5f5; 
+    border: none; 
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
