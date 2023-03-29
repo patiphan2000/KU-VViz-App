@@ -51,9 +51,9 @@ export default function LoginPage() {
                 <div className={styles.login_form}>
                     <h1>KU-VViz</h1>
                     <p style={{fontSize: '1.5em'}}>Login</p>
-                    <div className={styles.label_left}>Nontri Account</div>
-                    
                     <div style={{minWidth: '260px'}}></div>
+
+                    <div className={styles.label_left}>Nontri Account</div>
                     
                     <div className={styles.input_container}>
                         <input 
