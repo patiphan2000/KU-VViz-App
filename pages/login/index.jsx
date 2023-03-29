@@ -2,6 +2,7 @@ import { useContext, useState } from 'react'
 import {CourseDataContext} from '../../contexts/DataContext'
 
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import axios from 'axios'
 
 import { encodeString } from './encoder'
@@ -22,6 +23,7 @@ const prompt = Prompt({
 export default function LoginPage() {
 
     const {data, setData} = useContext(CourseDataContext)
+    const [isLoading, setIsLoading] = useState(false)
 
     const [usr, setUsr] = useState('');
     const [pwd, setPwd] = useState('');
@@ -30,10 +32,13 @@ export default function LoginPage() {
     let router= useRouter()
     // condition base redirecting
     const redirect = () => {
-        router.push('/')
+        // router.push('/')
     }
 
     const submit = () => {
+
+        setIsLoading(true);
+
         console.log("submit");
         const username = usr;
         const password = pwd;
@@ -42,14 +47,20 @@ export default function LoginPage() {
         // fetch data
         axios.post('');
 
-        redirect();
+        // redirect();
+        console.log("loading");
+        setTimeout(()=>{setIsLoading(false);}, 3000);
     }
 
     return (
         <div className={prompt.className}>
+            <div className={(isLoading)? `${styles.global_loader}`:`${styles.global_loader} ${styles.hide}`}>
+                <Image className={styles.loader} src="/loading_icon.png" width="250" height="200"/>
+            </div>
             <div className={styles.login_container}>
                 <div className={styles.login_form}>
-                    <h1>KU-VViz</h1>
+                    <Image src="/KU-VViz logo.png" width="250" height={250/(16/9)}/>
+                    {/* <h1>KU-VViz</h1> */}
                     <p style={{fontSize: '1.5em'}}>Login</p>
                     <div style={{minWidth: '260px'}}></div>
 

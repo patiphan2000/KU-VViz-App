@@ -12,7 +12,6 @@ export default function Home() {
   const {data, setData} = useContext(CourseDataContext)
 
   const router = useRouter()
-
   
   useEffect(() => {
     if (data.course.length <= 0) {
