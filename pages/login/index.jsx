@@ -14,6 +14,8 @@ import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 
 import styles from './login.module.css'
 
+const baseURL = process.env.BASE_URL;
+
 const prompt = Prompt({
     weight: ['400', '700'],
     style: ['normal', 'italic'],
@@ -23,6 +25,10 @@ const prompt = Prompt({
 export default function LoginPage() {
 
     const {data, setData} = useContext(CourseDataContext)
+    const setCourseData = (data) => {
+        setData(data);
+    }
+
     const [isLoading, setIsLoading] = useState(false)
 
     const [usr, setUsr] = useState('');
@@ -32,34 +38,56 @@ export default function LoginPage() {
     let router= useRouter()
     // condition base redirecting
     const redirect = () => {
-        // router.push('/')
+        router.push('/')
     }
 
-    const submit = () => {
+    const submit = async () => {
 
         setIsLoading(true);
 
         console.log("submit");
         const username = usr;
         const password = pwd;
-        const encrypPwd = encodeString(password.toString("base64"));
+        // console.log(username, password);
+        const encrypUsr = encodeString(username);
+        const encrypPwd = encodeString(password);
+
+        console.log("loading");
 
         // fetch data
-        axios.post('');
+        try {
+            await axios({
+                method: 'post',
+                url: baseURL + '/get-all',
+                headers: {}, 
+                data: {
+                    "username": encrypUsr,
+                    "password": encrypPwd
+                }
+              }).then(res => {
+                setCourseData({
+                    'course': res.data.program_data,
+                    'stdGrade': res.data.grades,
+                    'stdEnroll': res.data.enroll
+                })
+            });
+        }
+        catch {
 
-        // redirect();
-        console.log("loading");
-        setTimeout(()=>{setIsLoading(false);}, 3000);
+        }
+        redirect();
+        setIsLoading(false);
+        // setTimeout(()=>{setIsLoading(false);}, 1000);
     }
 
     return (
         <div className={prompt.className}>
             <div className={(isLoading)? `${styles.global_loader}`:`${styles.global_loader} ${styles.hide}`}>
-                <Image className={styles.loader} src="/loading_icon.png" width="250" height="200"/>
+                <Image className={styles.loader} alt="loading" src="/loading_icon.png" width="250" height="200"/>
             </div>
             <div className={styles.login_container}>
                 <div className={styles.login_form}>
-                    <Image src="/KU-VViz logo.png" width="250" height={250/(16/9)}/>
+                    <Image alt="logo" src="/KU-VViz logo.png" width="250" height={250/(16/9)}/>
                     {/* <h1>KU-VViz</h1> */}
                     <p style={{fontSize: '1.5em'}}>Login</p>
                     <div style={{minWidth: '260px'}}></div>
@@ -71,7 +99,7 @@ export default function LoginPage() {
                         type="text" id="username" name="username" 
                         placeholder='username'
                         className={styles.input_field}
-                        onChange = {(e) => {setPwd(e.currentTarget.value)}}
+                        onChange = {(e) => {setUsr(e.currentTarget.value)}}
                         />
                     </div>
 

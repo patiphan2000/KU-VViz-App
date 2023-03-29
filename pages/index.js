@@ -22,9 +22,9 @@ export default function Home() {
   return (
     <div style={{color: 'black'}}>
       <KuVViz
-      // course = {data.result}
-      // stdGrade={[]}
-      // stdEnroll={[]}
+      course = {data.course}
+      stdGrade={data.stdGrade}
+      stdEnroll={data.stdEnroll}
       />
     </div>
   )

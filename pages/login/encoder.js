@@ -1,9 +1,6 @@
 import * as crypto from 'crypto'
 
-const kuPublicKey = process.env.KU_PUBLIC_KEY;
-// const kuPublicKey = process.env.KU_PUBLIC_KEY.replace(/\n/gm, '\n');
-
-// const crypto = require('crypto');
+const kuPublicKey = process.env.KU_PUBLIC_KEY.replace(/\n/gm, '\n');
 
 export function encodeString(text) {
 
@@ -13,5 +10,5 @@ export function encodeString(text) {
             padding: crypto.constants.RSA_PKCS1_OAEP_PADDING
         },
         Buffer.from(text, 'utf8')
-    ).toString("base64")
+    ).toString("base64");
   };
