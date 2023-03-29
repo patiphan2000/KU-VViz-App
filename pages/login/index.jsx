@@ -87,7 +87,12 @@ export default function LoginPage() {
             </div>
             <div className={styles.login_container}>
                 <div className={styles.login_form}>
-                    <Image alt="logo" src="/KU-VViz logo.png" width="250" height={250/(16/9)}/>
+                    <Image 
+                        alt="logo" 
+                        src="/KU-VViz logo.png" 
+                        width={250} height={147}
+                        priority={true}
+                    />
                     {/* <h1>KU-VViz</h1> */}
                     <p style={{fontSize: '1.5em'}}>Login</p>
                     <div style={{minWidth: '260px'}}></div>

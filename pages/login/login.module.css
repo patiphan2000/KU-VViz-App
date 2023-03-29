@@ -50,8 +50,8 @@
 }
 
 .loader {
-    width: 250px;
-    height: 200px;
+    /* width: 250px;
+    height: 200px; */
     position: relative;
     animation: rotation 1.2s linear infinite;
 }@keyframes rotation{
