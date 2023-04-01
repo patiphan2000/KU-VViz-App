@@ -17,7 +17,7 @@ import styles from './login.module.css'
 import logoImage from '../../public/KU-VViz logo.png'
 import loadImage from '../../public/loading_icon.png'
 
-const baseURL = process.env.BASE_URL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const prompt = Prompt({
     weight: ['400', '700'],
