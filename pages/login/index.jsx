@@ -86,17 +86,17 @@ export default function LoginPage() {
     return (
         <div className={prompt.className}>
             <div className={(isLoading)? `${styles.global_loader}`:`${styles.global_loader} ${styles.hide}`}>
-                {loadImage && <Image className={styles.loader} alt="loading" src="/loading_icon.png" width="250" height="200"/>}
+                {/* {loadImage && <Image className={styles.loader} alt="loading" src="/loading_icon.png" width="250" height="200"/>} */}
             </div>
             <div className={styles.login_container}>
                 <div className={styles.login_form}>
-                    {logoImage && <Image 
+                    {/* {logoImage && <Image 
                         alt="logo" 
                         src={logoImage} 
                         width={250} height={147}
                         priority={true}
-                    />}
-                    {/* <h1>KU-VViz</h1> */}
+                    />} */}
+                    <h1>KU-VViz</h1>
                     <p style={{fontSize: '1.5em'}}>Login</p>
                     <div style={{minWidth: '260px'}}></div>
 
