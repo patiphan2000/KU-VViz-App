@@ -14,6 +14,9 @@ import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 
 import styles from './login.module.css'
 
+import logoImage from '../../public/KU-VViz logo.png'
+import loadImage from '../../public/loading_icon.png'
+
 const baseURL = process.env.BASE_URL;
 
 const prompt = Prompt({
@@ -83,16 +86,16 @@ export default function LoginPage() {
     return (
         <div className={prompt.className}>
             <div className={(isLoading)? `${styles.global_loader}`:`${styles.global_loader} ${styles.hide}`}>
-                <Image className={styles.loader} alt="loading" src="/loading_icon.png" width="250" height="200"/>
+                {loadImage && <Image className={styles.loader} alt="loading" src="/loading_icon.png" width="250" height="200"/>}
             </div>
             <div className={styles.login_container}>
                 <div className={styles.login_form}>
-                    <Image 
+                    {logoImage && <Image 
                         alt="logo" 
-                        src="/KU-VViz logo.png" 
+                        src={logoImage} 
                         width={250} height={147}
                         priority={true}
-                    />
+                    />}
                     {/* <h1>KU-VViz</h1> */}
                     <p style={{fontSize: '1.5em'}}>Login</p>
                     <div style={{minWidth: '260px'}}></div>
