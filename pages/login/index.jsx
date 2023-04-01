@@ -53,7 +53,9 @@ export default function LoginPage() {
         const password = pwd;
         // console.log(username, password);
         const encrypUsr = encodeString(username);
+        console.log("username encrypted!!")
         const encrypPwd = encodeString(password);
+        console.log("password encrypted!!")
 
         console.log("loading");
 
