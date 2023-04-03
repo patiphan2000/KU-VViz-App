@@ -19,6 +19,8 @@ export default function Home() {
     }
   }, [])
 
+  console.log(data.stdGrade);
+
   return (
     <div style={{color: 'black'}}>
       <KuVViz
