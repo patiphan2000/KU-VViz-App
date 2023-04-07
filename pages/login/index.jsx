@@ -19,6 +19,18 @@ import loadImage from '../../public/loading_icon.png'
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
+function convertEnrollList(enroll_data) {
+    var result = [];
+    for (let i in enroll_data) {
+        result.push({
+            subject_code: enroll_data[i].subjectCode.replace('-[0-9]{2}', ''),
+            subject_name_th: enroll_data[i].subjectNameTh,
+            subject_name_en: enroll_data[i].subjectNameEn
+        });
+    }
+    return result;
+}
+
 const prompt = Prompt({
     weight: ['400', '700'],
     style: ['normal', 'italic'],
@@ -67,7 +79,7 @@ export default function LoginPage() {
                 setCourseData({
                     'course': res.data.program_data,
                     'stdGrade': res.data.grades,
-                    'stdEnroll': res.data.enroll
+                    'stdEnroll': convertEnrollList(res.data.enroll_data)
                 })
             });
         }
