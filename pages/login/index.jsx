@@ -47,14 +47,9 @@ export default function LoginPage() {
     const submit = async () => {
 
         setIsLoading(true);
-
         console.log("submit");
         const username = usr;
         const password = pwd;
-        const encrypUsr = await encodeString(username);
-        console.log("username encrypted!!")
-        const encrypPwd = await encodeString(password);
-        console.log("password encrypted!!")
 
         console.log("loading");
 
@@ -65,8 +60,8 @@ export default function LoginPage() {
                 url: baseURL + '/get-all',
                 headers: {}, 
                 data: {
-                    "username": encrypUsr,
-                    "password": encrypPwd
+                    "username": username,
+                    "password": password
                 }
               }).then(res => {
                 setCourseData({
