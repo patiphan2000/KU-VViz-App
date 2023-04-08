@@ -19,7 +19,7 @@ export default function Home() {
     }
   }, [])
 
-  console.log(data.stdGrade);
+  // console.log(data.stdGrade);
 
   return (
     <div style={{color: 'black'}}>
