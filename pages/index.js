@@ -7,6 +7,13 @@ import { KuVViz } from "ku-vviz"
 import { CourseVerification } from "ku-vviz"
 import 'ku-vviz/dist/index.css'
 
+import {Prompt} from 'next/font/google' 
+
+const prompt = Prompt({
+    weight: ['400', '700'],
+    style: ['normal', 'italic'],
+    subsets: ['latin'],
+  })
 
 export default function Home() {
   
@@ -35,15 +42,15 @@ export default function Home() {
     // console.log(verification.genEd[group].subject_list)
     const subject_list = verification.genEd[group].subject_list;
     const genGroup = (
-      <div style={{
-          fontFamily: 'Prompt',
+      <div className={prompt.className}>
+      <div 
+        style={{
           display: 'flex',
           flexDirection: 'column',
           gap: '5px',
           maxWidth: '60%'
         }}>
         <div key={group} style={{
-          fontFamily: 'Prompt',
           display: 'flex',
           justifyContent: 'space-between',
           fontSize: '1.2em',
@@ -66,6 +73,7 @@ export default function Home() {
             </div>);
           })}
         </div>
+      </div>
       </div>
     )
     listGenEd.push(genGroup);
