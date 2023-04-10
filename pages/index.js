@@ -33,10 +33,11 @@ export default function Home() {
     data.stdEnroll,
     data.gened_and_others
   );
-  console.log(verification);
+  console.log(data.gened_and_others);
 
   const listGenEd = [];
 
+  console.log(verification.genEd);
   for (let group in verification.genEd) {
     const currGroup = verification.genEd[group];
     // console.log(verification.genEd[group].subject_list)
@@ -57,7 +58,7 @@ export default function Home() {
           marginTop: '15px'
         }}>
           <div>{group}</div>
-          <div>{currGroup.credit_require + '/' + currGroup.credit_curr}</div>
+          <div>{currGroup.credit_curr + '/' + currGroup.credit_require}</div>
         </div>
         <div>
           {subject_list.map((e) => {

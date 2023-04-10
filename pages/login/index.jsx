@@ -25,7 +25,8 @@ function convertEnrollList(enroll_data) {
         result.push({
             subject_code: enroll_data[i].subjectCode.replace('-[0-9]{2}', ''),
             subject_name_th: enroll_data[i].subjectNameTh,
-            subject_name_en: enroll_data[i].subjectNameEn
+            subject_name_en: enroll_data[i].subjectNameEn,
+            credit: enroll_data[i].credit
         });
     }
     return result;
@@ -76,6 +77,7 @@ export default function LoginPage() {
                     "password": password
                 }
               }).then(res => {
+                // console.log(convertEnrollList(res.data.enroll_data));
                 setCourseData({
                     'course': res.data.program_data,
                     'stdGrade': res.data.grades,
