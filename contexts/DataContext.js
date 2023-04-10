@@ -8,7 +8,8 @@ export const CourseDataProvider = ({ children }) => {
     const [data, setData] = useState({
         'course': [],
         'stdGrade': [],
-        'stdEnroll': []
+        'stdEnroll': [],
+        'gened_and_others': []
     });
   
     return (

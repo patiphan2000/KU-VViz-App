@@ -79,7 +79,8 @@ export default function LoginPage() {
                 setCourseData({
                     'course': res.data.program_data,
                     'stdGrade': res.data.grades,
-                    'stdEnroll': convertEnrollList(res.data.enroll_data)
+                    'stdEnroll': convertEnrollList(res.data.enroll_data),
+                    'gened_and_others': res.data.gened_and_others
                 })
             });
         }
