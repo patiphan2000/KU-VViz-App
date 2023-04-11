@@ -3,7 +3,7 @@ import {CourseDataContext} from '../contexts/DataContext'
 
 import { useRouter } from 'next/router'
 
-import { KuVViz } from "ku-vviz"
+import { KuVViz, GenEDTable } from "ku-vviz"
 import { CourseVerification } from "ku-vviz"
 import 'ku-vviz/dist/index.css'
 
@@ -33,51 +33,16 @@ export default function Home() {
     data.stdEnroll,
     data.gened_and_others
   );
-  console.log(data.gened_and_others);
-
-  const listGenEd = [];
 
   console.log(verification.genEd);
+  const genEdList = []
   for (let group in verification.genEd) {
-    const currGroup = verification.genEd[group];
-    // console.log(verification.genEd[group].subject_list)
-    const subject_list = verification.genEd[group].subject_list;
-    const genGroup = (
-      <div className={prompt.className}>
-      <div 
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '5px',
-          maxWidth: '60%'
-        }}>
-        <div key={group} style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          fontSize: '1.2em',
-          marginTop: '15px'
-        }}>
-          <div>{group}</div>
-          <div>{currGroup.credit_curr + '/' + currGroup.credit_require}</div>
-        </div>
-        <div>
-          {subject_list.map((e) => {
-            return (
-            <div style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'space-between'
-            }}>
-              <div>{e.subject_code}</div>
-              <div>{e.subject_name_th}</div>
-              <div>{e.credit}</div>
-            </div>);
-          })}
-        </div>
-      </div>
-      </div>
-    )
-    listGenEd.push(genGroup);
+    genEdList.push({
+      group_name: group,
+      credit_curr: parseInt(verification.genEd[group].credit_curr),
+      credit_require: parseInt(verification.genEd[group].credit_require),
+      subject_list: verification.genEd[group].subject_list
+    })
   }
 
   return (
@@ -87,14 +52,18 @@ export default function Home() {
       stdGrade={data.stdGrade || []}
       stdEnroll={data.stdEnroll || []}
       />
-      <div style={{fontFamily: 'Prompt', fontSize: '1.2em'}}>สถานะตรวจจบ: 
-        <span style={{
-          color: (verification.status)? 'green':'red'
-        }}>{(verification.status)? ' ผ่าน':' ไม่ผ่าน'}</span>
+      <div style={{ display:'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div style={{fontFamily: 'Prompt', fontSize: '1.2em'}}>สถานะตรวจจบ: 
+          <span style={{
+            color: (verification.status)? 'green':'red'
+          }}>{(verification.status)? ' ผ่าน':' ไม่ผ่าน'}</span>
+        </div>
+        <div style={{
+          width: '80%', paddingLeft: '15%'
+        }}>
+          <GenEDTable genEdList={genEdList} />
+        </div>
       </div>
-      <div>{listGenEd.map((e) => {
-        return e;
-      })}</div>
     </div>
   )
 }
