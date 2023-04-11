@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react'
+import Image from 'next/image'
 import {CourseDataContext} from '../contexts/DataContext'
 
 import { useRouter } from 'next/router'
@@ -6,6 +7,8 @@ import { useRouter } from 'next/router'
 import { KuVViz, GenEDTable } from "ku-vviz"
 import { CourseVerification } from "ku-vviz"
 import 'ku-vviz/dist/index.css'
+
+import logoImage from '../public/KU-VViz logo.png'
 
 import {Prompt} from 'next/font/google' 
 
@@ -20,6 +23,11 @@ export default function Home() {
   const {data, setData} = useContext(CourseDataContext)
 
   const router = useRouter()
+
+  const setCourseData = (data) => {
+    setData(data);
+    router.push("/login")
+  }
 
   useEffect(() => {
     if (data.course.length <= 0) {
@@ -47,6 +55,35 @@ export default function Home() {
 
   return (
     <div style={{color: 'black'}}>
+      <div className='navbar'>
+        <div className='linksec'>
+          <div className='linkE' style={{textAlign: 'center'}}>แจ้งปัญหา/กรอกแบบสอบถาม</div>
+        </div>
+        <div className='logosec'>
+          <div className='logo_container'>
+            <Image 
+              alt="logo" 
+              src={logoImage} 
+              width={85} height={50}
+              priority={true}
+            />
+          </div>
+        </div>
+        <div className='logoutsec'>
+          <div 
+          className='linkE'
+          onClick={() => {
+            setCourseData({
+              'course': [],
+              'stdGrade': [],
+              'stdEnroll': [],
+              'gened_and_others': []
+          })
+          }}
+          >logout</div>
+        </div>
+      </div>
+      <div style={{height: '50px'}}></div>
       <KuVViz
       course = {data.course || []}
       stdGrade={data.stdGrade || []}

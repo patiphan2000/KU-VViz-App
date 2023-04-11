@@ -113,3 +113,50 @@ body {
   /* color: rgb(var(--foreground-rgb)); */
   background: #f5f5f5;
 }
+
+.navbar {
+  font-family: 'Prompt';
+  width: 100%;
+  height: 50px;
+  background-color: #02BC77;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-left-radius: 0.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.logosec {
+  max-width: 100%;
+}
+
+.logo_container {
+  display: flex;
+  justify-content: center;
+}
+
+.linksec {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
+.logoutsec {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-right: 30px;
+}
+
+.linkE {
+  cursor: pointer;
+}
+
+.linkE:hover {
+  color: white;
+  /* font-weight: 500; */
+}
