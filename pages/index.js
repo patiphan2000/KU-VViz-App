@@ -52,14 +52,35 @@ export default function Home() {
       stdGrade={data.stdGrade || []}
       stdEnroll={data.stdEnroll || []}
       />
-      <div style={{ display:'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div style={{fontFamily: 'Prompt', fontSize: '1.2em'}}>สถานะตรวจจบ: 
-          <span style={{
-            color: (verification.status)? 'green':'red'
-          }}>{(verification.status)? ' ผ่าน':' ไม่ผ่าน'}</span>
+      <div style={{ 
+        display:'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'center',
+        }}>
+        <div style={{width: '80%', paddingLeft: '15%', 
+        visibility: (verification.status)? '':'hidden',
+        height: (verification.status)? '':'0',
+        opacity: (verification.status)? '100':'0',
+        }}>
+          <div style={{
+          display: 'flex', 
+          'justifyContent': 'center', alignItems: 'center', 
+          height: '100px', width: '80%', marginTop: '20px', marginBottom: '20px',
+          borderRadius: '0.5rem',
+          backgroundColor: 'white'
+          }}>
+            <div style={{
+              fontFamily: 'Prompt', 
+              fontSize: '1.2em',
+              }}>ตรวจสอบเงื่อนไขจบการศึกษา: 
+              <span style={{
+                color: 'green'
+              }}> ผ่าน &#9989;</span>
+            </div>
+          </div>
         </div>
         <div style={{
-          width: '80%', paddingLeft: '15%'
+          width: '80%', paddingLeft: '15%', marginTop: (verification.status)? '0': '30px' 
         }}>
           <GenEDTable genEdList={genEdList} />
         </div>
