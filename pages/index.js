@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import {CourseDataContext} from '../contexts/DataContext'
 
 import { useRouter } from 'next/router'
@@ -57,7 +58,9 @@ export default function Home() {
     <div style={{color: 'black'}}>
       <div className='navbar'>
         <div className='linksec'>
-          <div className='linkE' style={{textAlign: 'center'}}>แจ้งปัญหา/กรอกแบบสอบถาม</div>
+          <Link className='linkE' href="https://docs.google.com/forms/d/e/1FAIpQLSdRrZfZADK8S979FbBHO4jJSU59BT6hV4PW0wR5lN1YmxeeXA/viewform?usp=sf_link" 
+          target="_blank">แจ้งปัญหา/กรอกแบบสอบถาม</Link>
+          {/* <div className='linkE' style={{textAlign: 'center'}}>แจ้งปัญหา/กรอกแบบสอบถาม</div> */}
         </div>
         <div className='logosec'>
           <div className='logo_container'>
@@ -94,7 +97,8 @@ export default function Home() {
         flexDirection: 'column', 
         justifyContent: 'center',
         }}>
-        <div style={{width: '80%', paddingLeft: '15%', 
+        <div className="verification_container" 
+        style={{
         visibility: (verification.status)? '':'hidden',
         height: (verification.status)? '':'0',
         opacity: (verification.status)? '100':'0',
@@ -116,8 +120,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div style={{
-          width: '80%', paddingLeft: '15%', marginTop: (verification.status)? '0': '30px' 
+        <div className="genEd_container"
+        style={{
+          marginTop: (verification.status)? '0': '30px' 
         }}>
           <GenEDTable genEdList={genEdList} />
         </div>

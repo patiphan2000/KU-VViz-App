@@ -153,10 +153,43 @@ body {
 }
 
 .linkE {
+  color: black;
   cursor: pointer;
+  text-align: center;
 }
 
 .linkE:hover {
   color: white;
   /* font-weight: 500; */
+}
+
+.verification_container {
+  width: 80%; 
+  padding-left: 15%;
+}
+
+.genEd_container {
+  width: 80%; 
+  padding-left: 15%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .linkE {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* number of lines to show */
+              line-clamp: 1; 
+      -webkit-box-orient: vertical;
+  } 
+
+  .verification_container {
+    width: 100%; 
+    padding-left: 15%;
+  }
+
+  .genEd_container {
+    width: 100%; 
+    /* padding-left: 15%; */
+  }
 }
