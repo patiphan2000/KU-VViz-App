@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import Layout from '@/components/layout';
 
 // import Context for course data
 import {CourseDataProvider} from '../contexts/DataContext'
@@ -12,8 +13,10 @@ config.autoAddCss = false;
 
 export default function App({ Component, pageProps }) {
   return (
-    <CourseDataProvider>
-      <Component {...pageProps} />
-    </CourseDataProvider>
+    <Layout>
+      <CourseDataProvider>
+        <Component {...pageProps} />
+      </CourseDataProvider>
+    </Layout>
   )
 }
