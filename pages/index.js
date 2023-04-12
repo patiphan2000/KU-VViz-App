@@ -19,8 +19,6 @@ const prompt = Prompt({
     subsets: ['latin'],
   })
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
 export default function Home() {
   
   const {data, setData} = useContext(CourseDataContext)
