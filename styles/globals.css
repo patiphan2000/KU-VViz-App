@@ -173,6 +173,15 @@ body {
   padding-left: 15%;
 }
 
+
+.destop_suggest {
+  font-family: 'Prompt';
+  visibility: hidden;
+  opacity: 0%;
+  height: 0;
+  color: gray;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .linkE {
@@ -186,10 +195,17 @@ body {
   .verification_container {
     width: 100%; 
     padding-left: 15%;
+    text-align: center;
   }
 
   .genEd_container {
     width: 100%; 
     /* padding-left: 15%; */
+  }
+
+  .destop_suggest {
+    visibility: unset;
+    opacity: 100%;
+    height: auto;
   }
 }

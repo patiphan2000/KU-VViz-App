@@ -153,7 +153,8 @@ export default function LoginPage() {
                             Login
                         </button>
                     </div>
-                    <div style={{fontSize: '0.8em'}}>เว็บไซต์นี้<span style={{color: 'red'}}> ไม่ใช่ </span>เว็บไซต์อย่างเป็นทางการ<br></br>ของมหาวิตยาลัยเกษตรศาสตร์</div>
+                    <div style={{fontSize: '0.8em'}}>เว็บไซต์นี้<span style={{color: 'red'}}> ไม่ใช่ </span>เว็บไซต์อย่างเป็นทางการ<br>
+                    </br>ของมหาวิตยาลัยเกษตรศาสตร์</div>
                 </div>
             </div>
         </div>

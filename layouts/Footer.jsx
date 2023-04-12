@@ -19,8 +19,6 @@ export default function Footer() {
             <div style={{fontSize: '0.9em'}}>
                 {'เว็บไซต์นี้เป็นส่วนหนึ่งของโครงงานวิชา 01219499 Innovative Software Group Project'}
             </div>
-            <div></div>
-            <div></div>
         </div>
         // <div style={{fontFamily: 'Prompt', fontSize: '0.9em', textAlign: 'center'}}>
         // {'เว็บไซต์นี้เป็นส่วนหนึ่งของโครงงานวิชา 01219499 Innovative Software Group Project'}

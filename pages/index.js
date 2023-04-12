@@ -19,6 +19,8 @@ const prompt = Prompt({
     subsets: ['latin'],
   })
 
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 export default function Home() {
   
   const {data, setData} = useContext(CourseDataContext)
@@ -87,6 +89,9 @@ export default function Home() {
         </div>
       </div>
       <div style={{height: '50px'}}></div>
+      <div className='destop_suggest'>
+        *เข้าใช้งานเว็บไซต์ด้วยอุปกรณ์เดสก์ท็อปหรือแล็ปท็อป<br></br>เพื่อประสบการณ์การใช้งานที่ดีที่สุด
+      </div>
       <KuVViz
       course = {data.course || []}
       stdGrade={data.stdGrade || []}
@@ -97,6 +102,23 @@ export default function Home() {
         flexDirection: 'column', 
         justifyContent: 'center',
         }}>
+        <div className="verification_container">
+          <div style={{
+          display: 'flex', 
+          'justifyContent': 'center', alignItems: 'center', 
+          height: '100px', width: '80%', marginTop: '10px', marginBottom: '-25px',
+          }}>
+            <div style={{
+              fontFamily: 'Prompt', 
+              fontSize: '1em',
+              textAlign: 'center',
+              color: 'gray'
+              }}>
+              *เพื่อการตรวจสอบข้อมูลหน่วยกิตวิชาบูรณาการ(genEd)ที่แม่นยำ
+              ผู้ใช้ควรตรวจสอบข้อมูลกับมหาวิทยาลัยโดยตรงอีกครั้ง
+            </div>
+          </div>
+        </div>
         <div className="verification_container" 
         style={{
         visibility: (verification.status)? '':'hidden',
@@ -113,7 +135,7 @@ export default function Home() {
             <div style={{
               fontFamily: 'Prompt', 
               fontSize: '1.2em',
-              }}>ตรวจสอบเงื่อนไขจบการศึกษา: 
+              }}>ตรวจสอบเงื่อนไขจบการศึกษา:
               <span style={{
                 color: 'green'
               }}> ผ่าน &#9989;</span>
