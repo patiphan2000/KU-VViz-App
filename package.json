@@ -16,7 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.3.4",
     "encrypt-rsa": "^2.1.5",
-    "ku-vviz": "^0.4.4",
+    "ku-vviz": "^0.4.5",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"

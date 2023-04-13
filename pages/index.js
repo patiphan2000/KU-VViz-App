@@ -27,10 +27,22 @@ export default function Home() {
 
   const setCourseData = (data) => {
     setData(data);
-    router.push("/login")
   }
 
+  // useEffect(() => {
+  //   // const saved_data = window.localStorage.getItem('KU_VVIZ_COURSE_DATA');
+  //   // const retr_data = JSON.parse(saved_data);
+  //   if (data.course.length > 0) {
+  //     setCourseData(retr_data);
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   window.localStorage.setItem('KU_VVIZ_COURSE_DATA', JSON.stringify(data));
+  // }, [data])
+
   useEffect(() => {
+    // const saved_data = window.localStorage.getItem('KU_VVIZ_COURSE_DATA');
     if (data.course.length <= 0) {
       router.push("/login")
     }
@@ -82,6 +94,7 @@ export default function Home() {
               'stdEnroll': [],
               'gened_and_others': []
           })
+          router.push("/login");
           }}
           >logout</div>
         </div>
