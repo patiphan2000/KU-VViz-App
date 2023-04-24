@@ -33,11 +33,11 @@ export default function Home() {
     data.stdEnroll,
     data.gened_and_others
   );
-  console.log(data.gened_and_others);
+  // console.log(data.gened_and_others);
 
   const listGenEd = [];
 
-  console.log(verification.genEd);
+  // console.log(verification.genEd);
   for (let group in verification.genEd) {
     const currGroup = verification.genEd[group];
     // console.log(verification.genEd[group].subject_list)

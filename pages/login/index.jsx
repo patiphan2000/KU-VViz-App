@@ -78,11 +78,18 @@ export default function LoginPage() {
                 }
               }).then(res => {
                 // console.log(convertEnrollList(res.data.enroll_data));
+                const genEd_exclude_well = [];
+                for (let i in res.data.gened_and_others) {
+                    if (res.data.gened_and_others[i].group_name_th !== 'กลุ่มสาระอยู่ดีมีสุข') {
+                        genEd_exclude_well.push(res.data.gened_and_others[i]);
+                    }
+                }
                 setCourseData({
                     'course': res.data.program_data,
                     'stdGrade': res.data.grades,
                     'stdEnroll': convertEnrollList(res.data.enroll_data),
-                    'gened_and_others': res.data.gened_and_others
+                    'gened_and_others': genEd_exclude_well
+                    // 'gened_and_others': res.data.gened_and_others
                 })
             });
         }
