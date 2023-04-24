@@ -1,0 +1,20 @@
+.footer {
+    font-family: 'Prompt';
+    width: 100%;
+    /* height: 15vh; */
+    left: 0;
+    bottom: 0;
+    margin-top: auto;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.icon_link {
+    color: black;
+}
