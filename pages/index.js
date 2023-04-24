@@ -54,17 +54,9 @@ export default function Home() {
     data.stdEnroll,
     data.gened_and_others
   );
-<<<<<<< HEAD
-  // console.log(data.gened_and_others);
-
-  const listGenEd = [];
-
-  // console.log(verification.genEd);
-=======
 
   // console.log(verification.genEd);
   const genEdList = []
->>>>>>> 4460f48b0bbcd54c6a4a19c37796b07ad3233410
   for (let group in verification.genEd) {
     genEdList.push({
       group_name: group,
