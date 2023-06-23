@@ -21,7 +21,7 @@ export default function GraphPage() {
             <KuVViz
             course = {exmData.course}
             stdGrade={exmData.std}
-            // stdEnroll={[]}
+            stdEnroll={exmData.enroll}
             />
         </div>
     )
