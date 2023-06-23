@@ -6,6 +6,8 @@ import { useRouter } from 'next/router'
 import { KuVViz } from "ku-vviz"
 import 'ku-vviz/dist/index.css'
 
+import exmData from '../../example_data/exm_data1.json'
+
 export default function GraphPage() {
 
     const {data, setData} = useContext(CourseDataContext)
@@ -17,8 +19,8 @@ export default function GraphPage() {
     return (
         <div style={{color: 'black'}}>
             <KuVViz
-            // course = {data.result}
-            // stdGrade={[]}
+            course = {exmData.course}
+            stdGrade={exmData.std}
             // stdEnroll={[]}
             />
         </div>

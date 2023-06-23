@@ -44,6 +44,42 @@
             "pre_subject": ["00000003"],
             "co_subject": [],
             "grouping_data": "2/1"
+        },
+        {
+            "subject_code": "00000006",
+            "subject_name_th": "วิชา 6",
+            "subject_name_en": "Subject 6",
+            "credit": 3,
+            "pre_subject": ["00000003"],
+            "co_subject": [],
+            "grouping_data": "2/2"
+        },
+        {
+            "subject_code": "00000007",
+            "subject_name_th": "วิชา 7",
+            "subject_name_en": "Subject 7",
+            "credit": 3,
+            "pre_subject": ["00000005"],
+            "co_subject": [],
+            "grouping_data": "2/2"
+        },
+        {
+            "subject_code": "00000008",
+            "subject_name_th": "วิชา 8",
+            "subject_name_en": "Subject 8",
+            "credit": 1,
+            "pre_subject": [],
+            "co_subject": [],
+            "grouping_data": "2/2"
+        },
+        {
+            "subject_code": "00000009",
+            "subject_name_th": "วิชา 9",
+            "subject_name_en": "Subject 9",
+            "credit": 3,
+            "pre_subject": ["00000008"],
+            "co_subject": [],
+            "grouping_data": "3/1"
         }
     ],
     "std": [
