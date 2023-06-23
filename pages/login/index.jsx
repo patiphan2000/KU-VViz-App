@@ -76,7 +76,8 @@ export default function LoginPage() {
                 'gened_and_others': exmData.genEd
                 // 'gened_and_others': res.data.gened_and_others
             })
-            redirect();
+            // redirect();
+            router.push('/graph')
             setIsLoading(false);
         }
 
