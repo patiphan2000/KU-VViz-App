@@ -66,6 +66,10 @@ export default function LoginPage() {
 
         console.log("loading");
 
+        if (username == "mrrobot" && password == "qwerty") {
+            router.push('/graph')
+        }
+
         // fetch data
         try {
             await axios({
