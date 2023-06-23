@@ -55,6 +55,8 @@ export default function Home() {
     data.gened_and_others
   );
 
+  // console.log(data.gened_and_others);
+
   // console.log(verification.genEd);
   const genEdList = []
   for (let group in verification.genEd) {

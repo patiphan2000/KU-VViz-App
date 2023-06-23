@@ -17,6 +17,8 @@ import styles from './login.module.css'
 import logoImage from '../../public/KU-VViz logo.png'
 import loadImage from '../../public/loading_icon.png'
 
+import exmData from '../../example_data/exm_data1.json'
+
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 function convertEnrollList(enroll_data) {
@@ -67,7 +69,15 @@ export default function LoginPage() {
         console.log("loading");
 
         if (username == "mrrobot" && password == "qwerty") {
-            router.push('/graph')
+            setCourseData({
+                'course': exmData.course,
+                'stdGrade': exmData.std,
+                'stdEnroll': exmData.enroll,
+                'gened_and_others': exmData.genEd
+                // 'gened_and_others': res.data.gened_and_others
+            })
+            redirect();
+            setIsLoading(false);
         }
 
         // fetch data
@@ -81,19 +91,19 @@ export default function LoginPage() {
                     "password": password
                 }
               }).then(res => {
-                // console.log(convertEnrollList(res.data.enroll_data));
-                const genEd_exclude_well = [];
-                for (let i in res.data.gened_and_others) {
-                    if (res.data.gened_and_others[i].group_name_th !== 'กลุ่มสาระอยู่ดีมีสุข') {
-                        genEd_exclude_well.push(res.data.gened_and_others[i]);
-                    }
-                }
+                // console.log(convertEnrollList(res.data.program_data));
+                // const genEd_exclude_well = [];
+                // for (let i in res.data.gened_and_others) {
+                //     if (res.data.gened_and_others[i].group_name_th !== 'กลุ่มสาระอยู่ดีมีสุข') {
+                //         genEd_exclude_well.push(res.data.gened_and_others[i]);
+                //     }
+                // }
                 setCourseData({
                     'course': res.data.program_data,
                     'stdGrade': res.data.grades,
                     'stdEnroll': convertEnrollList(res.data.enroll_data),
-                    'gened_and_others': genEd_exclude_well
-                    // 'gened_and_others': res.data.gened_and_others
+                    // 'gened_and_others': genEd_exclude_well
+                    'gened_and_others': res.data.gened_and_others
                 })
             });
         }

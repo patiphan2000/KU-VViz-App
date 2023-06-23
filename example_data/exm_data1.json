@@ -160,19 +160,21 @@
             "subject_code": "01200213-60",
             "subject_name_th": "พละ 1",
             "subject_name_en": "PE 1",
-            "credit": 3
+            "credit": 1
         }
     ],
     "genEd": [
         {
-            "group_name": "Wellness",
-            "subject_code": "01200213",
-            "credit_min": 1
+            "credit_min": "4",
+            "cstructure_id": "17796",
+            "group_name_th": "กลุ่มสาระอยู่ดีมีสุข",
+            "subject_code": "01200213"
         },
         {
-            "group_name": "Language",
-            "subject_code": "01320773",
-            "credit_min": 1
+            "credit_min": "13",
+            "cstructure_id": "31132",
+            "group_name_th": "กลุ่มสาระภาษากับการสื่อสาร",
+            "subject_code": "03754251"
         }
     ]
 }
