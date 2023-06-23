@@ -91,7 +91,8 @@ export default function LoginPage() {
                     "password": password
                 }
               }).then(res => {
-                // console.log(convertEnrollList(res.data.program_data));
+                console.log("courses------------");
+                console.log(convertEnrollList(res.data.program_data));
                 // const genEd_exclude_well = [];
                 // for (let i in res.data.gened_and_others) {
                 //     if (res.data.gened_and_others[i].group_name_th !== 'กลุ่มสาระอยู่ดีมีสุข') {
