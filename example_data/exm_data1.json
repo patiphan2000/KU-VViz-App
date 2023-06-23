@@ -1,0 +1,142 @@
+{
+    "course": [
+        {
+            "subject_code": "00000001",
+            "subject_name_th": "วิชา 1",
+            "subject_name_en": "Subject 1",
+            "credit": 3,
+            "pre_subject": [],
+            "co_subject": ["00000002"],
+            "grouping_data": "1/1"
+        },
+        {
+            "subject_code": "00000002",
+            "subject_name_th": "วิชา 2",
+            "subject_name_en": "Subject 2",
+            "credit": 3,
+            "pre_subject": [],
+            "co_subject": ["00000001"],
+            "grouping_data": "1/1"
+        },
+        {
+            "subject_code": "00000003",
+            "subject_name_th": "วิชา 3",
+            "subject_name_en": "Subject 3",
+            "credit": 3,
+            "pre_subject": ["00000001"],
+            "co_subject": [],
+            "grouping_data": "1/2"
+        },
+        {
+            "subject_code": "00000004",
+            "subject_name_th": "วิชา 4",
+            "subject_name_en": "Subject 4",
+            "credit": 3,
+            "pre_subject": ["00000003"],
+            "co_subject": [],
+            "grouping_data": "2/1"
+        },
+        {
+            "subject_code": "00000005",
+            "subject_name_th": "วิชา 5",
+            "subject_name_en": "Subject 5",
+            "credit": 3,
+            "pre_subject": ["00000003"],
+            "co_subject": [],
+            "grouping_data": "2/1"
+        }
+    ],
+    "std": [
+        {
+            "academicYear": "2562/2",
+            "gpa": 4,
+            "cr": 3,
+            "grade": [
+                {
+                    "std_code": "6210544444",
+                    "std_id": "55555",
+                    "subject_code": "00000003",
+                    "subject_name_th": "วิชา 3",
+                    "subject_name_en": "Subject 3",
+                    "credit": 3,
+                    "grade": "A",
+                    "registration_year": 62,
+                    "registration_semester": 2,
+                    "rownum": "1",
+                    "grouping_data": "2562/2",
+                    "gpa": 4,
+                    "cr": 3
+                }
+            ]
+        },
+        {
+            "academicYear": "2562/1",
+            "gpa": 4,
+            "cr": 6,
+            "grade": [
+                {
+                    "std_code": "6210544444",
+                    "std_id": "55555",
+                    "subject_code": "00000001",
+                    "subject_name_th": "วิชา 1",
+                    "subject_name_en": "Subject 1",
+                    "credit": 3,
+                    "grade": "A",
+                    "registration_year": 62,
+                    "registration_semester": 1,
+                    "rownum": "1",
+                    "grouping_data": "2562/1",
+                    "gpa": 4,
+                    "cr": 6
+                },
+                {
+                    "std_code": "6210544444",
+                    "std_id": "55555",
+                    "subject_code": "00000002",
+                    "subject_name_th": "วิชา 2",
+                    "subject_name_en": "Subject 2",
+                    "credit": 3,
+                    "grade": "A",
+                    "registration_year": 62,
+                    "registration_semester": 1,
+                    "rownum": "1",
+                    "grouping_data": "2562/1",
+                    "gpa": 4,
+                    "cr": 6
+                }
+            ]
+        }
+    ],
+    "enroll": [
+        {
+            "subject_code": "00000004-60",
+            "subject_name_th": "วิชา 4",
+            "subject_name_en": "Subject 4",
+            "credit": 3
+        },
+        {
+            "subject_code": "00000005-60",
+            "subject_name_th": "วิชา 5",
+            "subject_name_en": "Subject 5",
+            "credit": 3
+        },
+        {
+            "subject_code": "01200213-60",
+            "subject_name_th": "พละ 1",
+            "subject_name_en": "PE 1",
+            "credit": 3
+        }
+    ],
+    "genEd": [
+        {
+            "group_name": "Wellness",
+            "subject_code": "01200213",
+            "credit_min": 1
+        },
+        {
+            "group_name": "Language",
+            "subject_code": "01320773",
+            "credit_min": 1
+        }
+    ]
+}

@@ -78,11 +78,18 @@ export default function LoginPage() {
                 }
               }).then(res => {
                 // console.log(convertEnrollList(res.data.enroll_data));
+                const genEd_exclude_well = [];
+                for (let i in res.data.gened_and_others) {
+                    if (res.data.gened_and_others[i].group_name_th !== 'กลุ่มสาระอยู่ดีมีสุข') {
+                        genEd_exclude_well.push(res.data.gened_and_others[i]);
+                    }
+                }
                 setCourseData({
                     'course': res.data.program_data,
                     'stdGrade': res.data.grades,
                     'stdEnroll': convertEnrollList(res.data.enroll_data),
-                    'gened_and_others': res.data.gened_and_others
+                    'gened_and_others': genEd_exclude_well
+                    // 'gened_and_others': res.data.gened_and_others
                 })
             });
         }
@@ -154,7 +161,7 @@ export default function LoginPage() {
                         </button>
                     </div>
                     <div style={{fontSize: '0.8em'}}>เว็บไซต์นี้<span style={{color: 'red'}}> ไม่ใช่ </span>เว็บไซต์อย่างเป็นทางการ<br>
-                    </br>ของมหาวิตยาลัยเกษตรศาสตร์</div>
+                    </br>ของมหาวิทยาลัยเกษตรศาสตร์</div>
                 </div>
             </div>
         </div>
