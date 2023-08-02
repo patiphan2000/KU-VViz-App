@@ -11,3 +11,5 @@
 ### How to use KU-VViz
 ผู้ใช้สามารถล็อคอินเข้าใช้เว็บไซต์ได้ด้วย nontri account ของนิสิตมหาวิทยาลัยเกษตรศาสตร์ <br>
 หรือดูตัวอย่างการแสดงผลของเว็บไซต์ได้ [ที่นี่](https://ku-vviz-app.vercel.app/graph)
+
+![ตัวอย่างการใช้งานเว็บไซต์](https://github.com/patiphan2000/KU-VViz-App/blob/master/public/KU_VViz_Example-min_compressed.gif)
